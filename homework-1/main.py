@@ -16,4 +16,10 @@ if __name__ == '__main__':
     print(stack.top.next_node.data)  # data2
     print(stack.top.next_node.next_node.data)  # data1
     print(stack.top.next_node.next_node.next_node)  # None
-    print(stack.top.next_node.next_node.next_node.data)  # AttributeError: 'NoneType' object has no attribute 'data'
+    if stack.top is not None and stack.top.next_node is not None and stack.top.next_node.next_node is not None:
+        if stack.top.next_node.next_node.next_node is not None:
+            print(stack.top.next_node.next_node.next_node.data)
+        else:
+            print("Стек содержит недостаточно узлов для данной операции")
+    else:
+        print("Стек содержит недостаточно узлов для данной операции")
